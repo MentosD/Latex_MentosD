@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Latex --专心内容创作，排版交给代码                              %%
+%% 作者：曼妥思加可乐                                              %%
+%% 参照Springer 官方模板修改                                       %%
+%%                                                                 %%
+%% 2021年11月18日                                                  %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[pdflatex,sn-mathphys]{sn-jnl}% Math and Physical Sciences Reference Style
+
+\jyear{2021}%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Article Title]{My First Latex Article}
+
+\author*[1]{\fnm{Mentos} \sur{Cola}}\email{MentosCola@emails.com}
+
+\author[1]{\fnm{Oreo} \sur{Milk}}\email{OreoMilk@emails.com}
+\equalcont{These authors contributed equally to this work.}
+
+\affil*[1]{\orgdiv{Mentos Office}, \orgname{Beijing University of Technology}, \orgaddress{\street{Street}, \city{Beijing}, \postcode{100124}, \country{China}}}
+
+\abstract{This is my first time writing an article in Latex. The article is about the experiment that Mentos sugar added into Cola. Let's get started}
+
+\keywords{Mentos, Cola}
+
+\maketitle
+
+\section{Introduction}\label{sec1}
+
+\section{Mentos-Cola Test}\label{sec2}
+
+\subsection{Test Principle}\label{subsec1}
+
+\subsubsection{Coca-Cola or Pepsi}\label{subsubsec1}
+Here is the main text
+
+Case 01:
+
+How many steps are needed to put Mentos sugar into Coke?
+1. Open the lid of the Cola bottle
+2. Put the Mentos in
+3. Close the lid of the Cola bottle
+
+Case 02:
+
+How many steps are needed to put Mentos sugar into Coke?
+
+1. Open the lid of the Cola bottle
+
+2. Put the Mentos in
+
+3. Close the lid of the Cola bottle
+
+$\alpha$, $\beta$, $\gamma$
+
+$\alpha$, $\beta$, $\gamma$
+
+Mentos Cola.    %原字体
+
+\textbf{Mentos Cola.}    %加粗
+
+\underline{Mentos Cola.}    %下划线
+
+\textit{Mentos Cola.}   %斜体
+
+\underline{\textbf{\textit{Mentos Cola.}}}  %斜体加粗下划线
+
+\begin{figure}[h]%
+\centering
+\includegraphics[width=0.5\textwidth]{fig01.jpg}        
+%width=0.5\textwidth 页边距的0.5倍 图片文件名是fig01.jpg
+\caption{I am Mentos Cola.}\label{fig01}
+%图名是 I am Mentos Cola.    图片的标签是fig01 在文中引用时需要使用标签名
+\end{figure}
+
+\begin{table}[h]
+\begin{center}
+%居中
+\caption{This is a table}\label{tab01}  
+%添加表名和标签
+\begin{tabular}{lll}
+\hline
+     & Mentos & Oreo \\ \hline
+Cola & A      & B    \\
+Milk & C      & D    \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+% 从Mathtype中复制得到的是  \[{x^2} - 2x + 1 = 0\]  删掉斜线和方括号
+%行内公式
+I am Mentos Cola.Today I am learning to solve ${x^2} - 2x + 1 = 0$. 
+
+%行间公式
+I am Mentos Cola.Today I am learning to solve equations.
+
+\begin{equation}
+{x^2} - 2x + 1 = 0 \label{eq01}
+\end{equation}
+
+It is so easy, $x = 1$.
+
+Cite a equation \ref{eq01} 
+Cite a reference \cite{bib1} 
+Cite an image \ref{fig01}
+
+\bibliography{sn-bibliography}% common bib file
+
+\end{document}
